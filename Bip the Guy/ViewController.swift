@@ -7,10 +7,14 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
 
     @IBOutlet weak var imageToPunch: UIImageView!
+    
+    var audioPlayer = AVAudioPlayer()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +31,24 @@ class ViewController: UIViewController {
         UIView.animate(withDuration: 0.25, delay: 0.0, options: [], animations: {self.imageToPunch.bounds = bounds}, completion: nil)
     }
     
+    func playSound(soundName: String, audioPlayer: inout AVAudioPlayer){
+        //can we load in sound name?
+        if let sound = NSDataAsset(name: soundName){
+            //check if sound.data is a sound file
+            do{
+                try audioPlayer = AVAudioPlayer(data: sound.data)
+                audioPlayer.play()
+            }
+            catch{
+                print("ERROR: file \(soundName) didn't load.")
+            }
+        }
+        else{
+            //if reading in the NSDataAsset didn't work tell the developer
+            print("ERROR: file \(soundName) didn't load.")
+        }
+    }
+    
     //MARK: Actions
     
     @IBAction func libraryPressed(_ sender: UIButton) {
@@ -38,6 +60,7 @@ class ViewController: UIViewController {
     @IBAction func imageTapped(_ sender: UITapGestureRecognizer) {
         print("You just pressed the image")
         animateImage()
+        playSound(soundName: "punchSound", audioPlayer: &audioPlayer)
     }
     
 }
