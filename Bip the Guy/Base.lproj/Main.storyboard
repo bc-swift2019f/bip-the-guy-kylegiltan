@@ -25,12 +25,6 @@
                                     <outletCollection property="gestureRecognizers" destination="7WV-3C-yts" appends="YES" id="uzx-No-gBJ"/>
                                 </connections>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Choose Image to Punch" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kZA-OE-9qM">
-                                <rect key="frame" x="116" y="461" width="183" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="06n-QT-97h">
                                 <rect key="frame" x="108" y="509" width="198" height="30"/>
                                 <subviews>
@@ -50,6 +44,12 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Image to Punch" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kZA-OE-9qM">
+                                <rect key="frame" x="116" y="461" width="182" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -58,6 +58,7 @@
                             <constraint firstItem="CVa-gW-kQf" firstAttribute="centerX" secondItem="kZA-OE-9qM" secondAttribute="centerX" id="QvZ-Rs-28J"/>
                             <constraint firstItem="06n-QT-97h" firstAttribute="top" secondItem="CVa-gW-kQf" secondAttribute="bottom" constant="8" symbolic="YES" id="Tpv-Ip-ayL"/>
                             <constraint firstItem="CVa-gW-kQf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="XFz-mk-dNR"/>
+                            <constraint firstItem="kZA-OE-9qM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="417" id="caq-fd-UGN"/>
                             <constraint firstItem="kZA-OE-9qM" firstAttribute="centerX" secondItem="06n-QT-97h" secondAttribute="centerX" id="wUi-Ft-jTv"/>
                             <constraint firstItem="CVa-gW-kQf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xbH-mL-P5o"/>
                             <constraint firstItem="kZA-OE-9qM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="116" id="yIK-5x-7Qk"/>
